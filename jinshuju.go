@@ -92,6 +92,12 @@ type Choice struct {
 	Value string
 }
 
+func NewJSJ(key string, secret string) *JSJ {
+	return &JSJ{
+		key, secret,
+	}
+}
+
 //GetFormInfo 获取表单定义
 func (j JSJ) GetFormInfo(formid string) (*Form, error) {
 	uri := "https://jinshuju.net/api/v1/forms/" + formid
